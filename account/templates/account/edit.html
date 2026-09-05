@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Edycja konta
+{% endblock %}
+
+{% block content %}
+  <h1>Edycja konta</h1>
+  <p>
+    Ustawienia konta mozesz zmienic za pomoca ponizszego formularza.
+  </p>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ user_form.as_p }}
+    {{ profile_form.as_p }}
+    <p><input type='submit' value="Zapisz zmiany"></p>
+  </form>
+{% endblock %}
