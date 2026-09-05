@@ -42,6 +42,7 @@
     {% endwith %}
 {% endblock %}
 {% block domready %}
+
     const url = '{% url "images:like" %}
     var options = {
         method: 'POST',
